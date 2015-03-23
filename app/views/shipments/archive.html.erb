@@ -1,0 +1,32 @@
+<div class="container1">
+	<table>
+		<tr>
+			<th><%= sortable "Shipper", "shipper" %></th>
+			<th><%= sortable "Consignee", "consignee" %></th>
+			<th><%= sortable "Masterbill", "masterbill" %></th>
+			<th><%= sortable "Housebill", "housebill" %></th>
+			<th><%= sortable "Clearance", "clearance" %></th>
+			<th><%= sortable "User ID", "user_id" %></th>
+			<th><%= sortable "ETA", "eta" %></th>
+			<th><%= sortable "ATA", "ata" %></th>
+			<th><%= sortable "Dispatched", "dispatched" %></th>
+			<th><%= sortable "POD", "pod" %></th>
+		</tr>
+		
+		<% @shipments.each do |shipment| %>
+			<tr>
+				<td><%= shipment.shipper %></td>
+				<td><%= shipment.consignee %></td>
+				<td><%= shipment.masterbill %></td>
+				<td><%= shipment.housebill %></td>
+				<td><%= shipment.clearance %></td>
+				<td><%= shipment.user_id %></td>
+				<td><%= shipment.eta %></td>
+				<td><%= shipment.ata %></td>
+				<td><%= shipment.dispatched %></td>
+				<td><%= shipment.pod %></td>				
+			</tr>
+		<% end %>
+
+	</table>
+</div>

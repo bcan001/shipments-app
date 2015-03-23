@@ -1,0 +1,76 @@
+<button id="PageRefresh">Refresh Page</button>
+<script type="text/javascript">
+	$('#PageRefresh').click(function() {
+    	      location.reload();
+	});
+</script>
+
+
+<div class="container1">
+	<table>
+
+		<thead>
+			<tr>
+				<th><%= sortable "Shipper", "shipper" %></th>
+				<th><%= sortable "Consignee", "consignee" %></th>
+				<th><%= sortable "Masterbill", "masterbill" %></th>
+				<th><%= sortable "Housebill", "housebill" %></th>
+				<th><%= sortable "Clearance", "clearance" %></th>
+				<th><%= sortable "User ID", "user_id" %></th>
+				<th><%= sortable "ETA", "eta" %></th>
+				<th><%= sortable "ATA", "ata" %></th>
+				<th><%= sortable "Dispatched", "dispatched" %></th>
+				<th><%= sortable "POD", "pod" %></th>
+			</tr>
+		</thead>
+
+		
+		<tbody>
+		<% @shipments.each do |shipment| %>
+			<tr>
+				<%= form_for(shipment, :method => :PUT) do |f| %>
+					<td><%= f.text_field :shipper %></td>
+					<td><%= f.text_field :consignee %></td>
+					<td><%= f.text_field :masterbill %></td>
+					<td><%= f.text_field :housebill %></td>
+					<td><%= f.text_field :clearance %></td>
+					<td><%= f.text_field :user_id %></td>
+					<td><%= f.text_field :eta %></td>
+					<td><%= f.text_field :ata %></td>
+					<td><%= f.text_field :dispatched %></td>
+					<td><%= f.text_field :pod %></td>
+					<td><%= f.submit 'SAVE' %></td>
+				<% end %>
+
+		
+				<td><%= link_to '<button type="button">Edit</button>'.html_safe, edit_shipment_path(shipment) %></td>
+				<td><%= link_to '<button type="button">Delete</button>'.html_safe, shipment, method: :delete, data: { confirm: 'are you sure?'} %></td>
+
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
+
+
+
+
+<script>
+$(function() {
+	
+
+
+    $('tbody > tr > td > input').each(function(index) {
+        var possibleStatus = [['dispatched', "f"], ['clearance', "t"]];
+        var currentStatus = $(this)[0].value;
+        //console.log(currentStatus);
+        // for each of these cells, if the cell matches a certain criteria, highlight it
+        for (var i = 0; i < possibleStatus.length; i++) {
+            if (currentStatus == possibleStatus[i][1]) {
+                $(this).addClass(possibleStatus[i][0]);
+            }
+        }
+    });
+});
+</script>
+

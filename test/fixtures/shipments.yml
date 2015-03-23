@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  shipper: MyString
+  consignee: MyString
+  masterbill: MyString
+  housebill: MyString
+  clearance: false
+  user_id: 1
+  eta: 2015-03-21
+  ata: 2015-03-21
+  dispatched: false
+  pod: MyString
+
+two:
+  shipper: MyString
+  consignee: MyString
+  masterbill: MyString
+  housebill: MyString
+  clearance: false
+  user_id: 1
+  eta: 2015-03-21
+  ata: 2015-03-21
+  dispatched: false
+  pod: MyString

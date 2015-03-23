@@ -1,0 +1,9 @@
+<%= form_for(:session, url: { action: 'create' }) do |f| %>
+<ul>
+  <li>Username:</li>
+  <li><%= f.text_field(:username) %></li>
+  <li>Password:</li>
+  <li><%= f.password_field :password %></li>
+  <li><%= f.submit 'Log In' %></li>
+</ul>
+<% end %>
