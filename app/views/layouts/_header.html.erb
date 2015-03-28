@@ -1,16 +1,23 @@
+<div id="nav">
+	<ul>
+		<li><%= link_to 'New User', new_users_path %></li>
+
+		<li><%= link_to 'New Shipment', new_shipment_path, 'data-no-turbolink' => true %></li>
+		<li><%= link_to 'Shipments >', shipments_path, 'data-no-turbolink' => true %></li>
+		<li><%= link_to 'POD/Billing/Closing >', billing_path, 'data-no-turbolink' => true %></li>
+		<li><%= link_to 'Archive >', archive_path, 'data-no-turbolink' => true %></li>
+		<li><%= link_to 'Logout', log_out_path, method: 'delete' %></li>
+
+	</ul>
+</div>
+
+
+
+
+
 <% if current_user %>
-	<div id="nav">
-		<ul>
-
-			<li><%= link_to 'New User', new_users_path %></li>
-
-			<li><%= link_to 'New Shipment', new_shipment_path, 'data-no-turbolink' => true %></li>
-			<li><%= link_to 'Shipments >', shipments_path, 'data-no-turbolink' => true %></li>
-			<li><%= link_to 'POD/Billing/Closing >', billing_path, 'data-no-turbolink' => true %></li>
-			<li><%= link_to 'Archive >', archive_path, 'data-no-turbolink' => true %></li>
-			<li><%= link_to 'Logout', log_out_path, method: 'delete' %></li>
-		</ul>
-	</div>
 	<p>Logged In As: <%= current_user.username %> | 
 	<%= Time.now.to_date %> <%= flash[:notice] %></p>
+<% else %>
+	<p>You are not logged in! <%= flash[:notice] %></p>
 <% end %>
