@@ -36,6 +36,7 @@ class ShipmentsController < ApplicationController
 
     @shipment.update(shipment_params)
 
+    flash[:notice] = "The shipment has been updated"
     redirect_to shipments_path
   end
 
@@ -45,10 +46,16 @@ class ShipmentsController < ApplicationController
     redirect_to shipments_path
   end
 
-  def archive
+  def billing
     #@shipments = Shipment.all
-    @shipments = Shipment.where(dispatched: true).order(sort_column + " " + sort_direction)
+    @shipments = Shipment.where({dispatched: true, archive: false}).order(sort_column + " " + sort_direction)
   end
+
+  def archive
+    @shipments = Shipment.where(archive: true)
+  end
+
+
 
 
   private

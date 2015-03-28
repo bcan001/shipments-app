@@ -23,11 +23,20 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy', as: 'log_out'
+  get '/logout', to: 'sessions#destroy', as: 'log_out'
+  delete '/logout', to: 'sessions#destroy'
 
 
+  # do not need delete for a session because it thinks you are doing something to a database
+  #delete '/logout', to: 'sessions#destroy'
+
+
+
+
+  get 'billing', to: 'shipments#billing', as: 'billing'
 
   get 'archive', to: 'shipments#archive', as: 'archive'
+
 
 
 

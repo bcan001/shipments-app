@@ -5,7 +5,7 @@ body {
 
 /*make the main index table centered*/
 div.container1 {
-    margin-left: 80px;
+    margin-left: 70px;
     margin-right: auto;
 }
 
@@ -45,7 +45,7 @@ div.container1 {
 
 /*for the shading of rows*/
 table {
-    width: 70em;
+    width: 80em;
 }
 
 

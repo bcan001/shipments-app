@@ -1,12 +1,16 @@
 <% if current_user %>
 	<div id="nav">
 		<ul>
-			<li><%= link_to 'New', new_shipment_path %></li>
-			<li><%= link_to 'Shipments', shipments_path %></li>
-			<li><%= link_to 'Archive', archive_path %></li>
+
+			<li><%= link_to 'New User', new_user_path %></li>
+
+			<li><%= link_to 'New Shipment', new_shipment_path %></li>
+			<li><%= link_to 'Shipments >', shipments_path %></li>
+			<li><%= link_to 'POD/Billing/Closing >', billing_path %></li>
+			<li><%= link_to 'Archive >', archive_path %></li>
 			<li><%= link_to 'Logout', log_out_path, method: 'delete' %></li>
 		</ul>
 	</div>
 	<p>Logged In As: <%= current_user.username %> | 
-	<%= Time.now.to_date %></p>
+	<%= Time.now.to_date %> <%= flash[:notice] %></p>
 <% end %>

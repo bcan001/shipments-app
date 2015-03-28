@@ -54,3 +54,22 @@
 
 	</table>
 </div>
+
+
+
+
+<script>
+$(function() {
+    $('tbody > tr > td > input').each(function(index) {
+        var possibleStatus = [['dispatched', "f"], ['clearance', "t"]];
+        var currentStatus = $(this)[0].value;
+        console.log(currentStatus);
+        // for each of these cells, if the cell matches a certain criteria, highlight it
+        for (var i = 0; i < possibleStatus.length; i++) {
+            if (currentStatus == possibleStatus[i][1]) {
+                $(this).addClass(possibleStatus[i][0]);
+            }
+        }
+    });
+});
+</script>

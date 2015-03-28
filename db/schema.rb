@@ -11,21 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150322010033) do
+ActiveRecord::Schema.define(version: 20150326015438) do
 
   create_table "shipments", force: :cascade do |t|
     t.string   "shipper"
     t.string   "consignee"
     t.string   "masterbill"
     t.string   "housebill"
-    t.boolean  "clearance"
-    t.integer  "user_id"
+    t.boolean  "clearance",  default: false
+    t.string   "user_id"
     t.date     "eta"
     t.date     "ata"
-    t.boolean  "dispatched"
+    t.boolean  "dispatched", default: false
     t.string   "pod"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "archive",    default: false
   end
 
   create_table "users", force: :cascade do |t|

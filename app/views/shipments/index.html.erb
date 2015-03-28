@@ -6,6 +6,7 @@
 </script>
 
 
+
 <div class="container1">
 	<table>
 
@@ -16,11 +17,11 @@
 				<th><%= sortable "Masterbill", "masterbill" %></th>
 				<th><%= sortable "Housebill", "housebill" %></th>
 				<th><%= sortable "Clearance", "clearance" %></th>
-				<th><%= sortable "User ID", "user_id" %></th>
+				<th><%= sortable "Handled By", "user_id" %></th>
 				<th><%= sortable "ETA", "eta" %></th>
 				<th><%= sortable "ATA", "ata" %></th>
 				<th><%= sortable "Dispatched", "dispatched" %></th>
-				<th><%= sortable "POD", "pod" %></th>
+
 			</tr>
 		</thead>
 
@@ -33,12 +34,12 @@
 					<td><%= f.text_field :consignee %></td>
 					<td><%= f.text_field :masterbill %></td>
 					<td><%= f.text_field :housebill %></td>
-					<td><%= f.text_field :clearance %></td>
+					<td><%= f.check_box :clearance %></td>
 					<td><%= f.text_field :user_id %></td>
 					<td><%= f.text_field :eta %></td>
 					<td><%= f.text_field :ata %></td>
-					<td><%= f.text_field :dispatched %></td>
-					<td><%= f.text_field :pod %></td>
+					<td><%= f.check_box :dispatched %></td>
+		
 					<td><%= f.submit 'SAVE' %></td>
 				<% end %>
 
@@ -58,8 +59,6 @@
 <script>
 $(function() {
 	
-
-
     $('tbody > tr > td > input').each(function(index) {
         var possibleStatus = [['dispatched', "f"], ['clearance', "t"]];
         var currentStatus = $(this)[0].value;
