@@ -32,6 +32,7 @@ class ShipmentsController < ApplicationController
   end
 
   def update
+    #binding.pry
     @shipment = Shipment.find(params[:id])
 
     @shipment.update(shipment_params)
