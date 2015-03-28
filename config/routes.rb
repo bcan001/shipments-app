@@ -18,13 +18,20 @@ Rails.application.routes.draw do
 
 
   root 'sessions#new'
-  resources :users
+  # resources :users
 
 
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy', as: 'log_out'
   delete '/logout', to: 'sessions#destroy'
+
+
+
+  get '/users/new', to: 'users#new', as: 'new_users'
+  post '/users', to: 'users#create'
+  get '/users/:id', to: 'users#show', as: 'user'
+
 
 
   # do not need delete for a session because it thinks you are doing something to a database
