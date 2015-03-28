@@ -6,15 +6,15 @@ class SessionsController < ApplicationController
 
 	def create
 
+
 		@user = User.find_by(:username => session_params[:username]).try(:authenticate, session_params[:password])
 
-
-		#binding.pry
 
 		if @user
 			session[:user_id] = @user.id
 			redirect_to shipments_path
 		else
+			flash[:notice] = "Please enter correct credentials"
 			render 'sessions/new'
 		end
 	end

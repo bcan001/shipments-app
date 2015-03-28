@@ -2,6 +2,10 @@ class ShipmentsController < ApplicationController
   # allows you to access methods from the view
   helper_method :sort_column, :sort_direction
 
+  #before_action :current_user
+
+
+
   def new
     @shipment = Shipment.new
   end
@@ -65,7 +69,7 @@ class ShipmentsController < ApplicationController
   end
 
   def sort_column
-    params[:sort] || "shipper"
+    params[:sort] || "user_id"
   end
 
   def sort_direction
