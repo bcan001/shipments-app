@@ -4,8 +4,8 @@
 
 			<li><%= link_to 'New User', new_user_path %></li>
 
-			<li><%= link_to 'New Shipment', new_shipment_path %></li>
-			<li><%= link_to 'Shipments >', shipments_path %></li>
+			<li><%= link_to 'New Shipment', new_shipment_path, 'data-no-turbolink' => true %></li>
+			<li><%= link_to 'Shipments >', shipments_path, 'data-no-turbolink' => true %></li>
 			<li><%= link_to 'POD/Billing/Closing >', billing_path %></li>
 			<li><%= link_to 'Archive >', archive_path %></li>
 			<li><%= link_to 'Logout', log_out_path, method: 'delete' %></li>
