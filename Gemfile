@@ -1,9 +1,12 @@
 source 'http://rubygems.org'
 
 gem 'pry-rails'
+gem 'pry-nav'
 
 gem 'bcrypt'
 
+gem 'rspec-rails'
+#gem 'capybara-webkit'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
