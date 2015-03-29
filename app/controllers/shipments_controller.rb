@@ -13,6 +13,9 @@ class ShipmentsController < ApplicationController
   def create
     @shipment = Shipment.new(shipment_params)
     if @shipment.save
+
+    flash[:notice] = "The shipment has been created"
+
       redirect_to shipments_path
     else
       render 'new'
@@ -20,6 +23,8 @@ class ShipmentsController < ApplicationController
   end
 
   def index
+
+    #binding.pry
 
     # show all shipments
     #@shipments = Shipment.all
