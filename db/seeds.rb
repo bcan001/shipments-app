@@ -26,7 +26,7 @@
 
 
 
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2016-01-01", ata: "2020-01-01", dispatched: false, pod: "Ernie Davis")
+Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2016-01-01", ata: "2020-01-01", dispatched: false, pod: "Ernie Davis", archive: true)
 Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2012-01-01", ata: "2020-01-01", dispatched: false, pod: "Thomas Jackson")
 Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2017-01-01", ata: "2020-01-01", dispatched: false, pod: "Thomas Jackson")
 Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2019-01-01", ata: "2020-01-01", dispatched: false, pod: "Thomas Jackson")
@@ -48,7 +48,7 @@ Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454
 Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2016-01-01", ata: "2020-01-01", dispatched: false, pod: "Ernie Davis")
 
 
-
+User.create(username: "keith", password: "keith")
 
 
 

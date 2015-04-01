@@ -1,0 +1,28 @@
+		
+<p>
+	Download:
+	<%= link_to "CSV", archive_path(format: "csv") %>
+	<%= link_to "Excel", archive_path(format: "xls")%>
+</p>
+<table border ="1">
+
+<tr>
+<th>Shipper</th>
+<th>Consignee</th>
+<th>Masterbill</th>
+<th>Housebill</th>
+<th>Clearance</th>
+<th>Handled By</th>
+<th>ETA</th>
+<th>ATA</th>
+<th>Dispatched</th>
+<th>POD</th>
+<th>Comments</th>
+<th>Archive</th>
+</tr>
+<% @shipments.each do |shipment|%>
+<tr>
+<td><% shipment.id%></td>
+</tr>
+<% end %>
+</table>

@@ -16,7 +16,7 @@ class ShipmentsController < ApplicationController
   end
 
   def index
-
+    
     # show all shipments
     #@shipments = Shipment.all
     @shipments = Shipment.where(dispatched: false).order(sort_column + " " + sort_direction)
@@ -53,8 +53,17 @@ class ShipmentsController < ApplicationController
   end
 
   def archive
+    #@shipment = shipment.order(:shipper)
     @shipments = Shipment.where(archive: true)
+
+    respond_to do |format|
+    format.html
+    format.csv { send_data @shipments.to_csv}
+    format.xls{ send_data @shipments.to_csv(col_sep: "\t")}
+  
   end
+end
+
 
 
 
