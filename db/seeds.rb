@@ -23,32 +23,18 @@
 # t.timestamps null: false
 
 
+User.create(username: "admin", password: "password")
 
-
-
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2016-01-01", ata: "2020-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2012-01-01", ata: "2020-01-01", dispatched: false, pod: "Thomas Jackson")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2017-01-01", ata: "2020-01-01", dispatched: false, pod: "Thomas Jackson")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2019-01-01", ata: "2020-01-01", dispatched: false, pod: "Thomas Jackson")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2012-01-01", ata: "2021-01-01", dispatched: false, pod: "Thomas Jackson")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20129584", clearance: false, user_id: 1, eta: "2014-01-01", ata: "2021-01-01", dispatched: false, pod: "Thomas Jackson")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2017-01-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2016-02-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2016-02-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2016-01-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2016-02-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2016-01-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2013-01-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2016-04-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "456-234254", housebill: "vhf20158475", clearance: false, user_id: 1, eta: "2011-01-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20158475", clearance: true, user_id: 1, eta: "2016-02-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20158475", clearance: true, user_id: 1, eta: "2011-01-01", ata: "2021-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2016-01-01", ata: "2020-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2013-01-01", ata: "2020-01-01", dispatched: false, pod: "Ernie Davis")
-Shipment.create(shipper: "GSX TRU", consignee: "YWX GSX", masterbill: "297-45454545", housebill: "vhf20129584", clearance: true, user_id: 1, eta: "2016-01-01", ata: "2020-01-01", dispatched: false, pod: "Ernie Davis")
-
-
-
+Shipment.create(shipper: "HIAMS-HK", consignee: "HIAMS-HK", masterbill: "297-45454545", housebill: "VHF20182018", clearance: true, user_id: 1, eta: "2015-03-25", ata: "2015-03-25", dispatched: false, pod: "")
+Shipment.create(shipper: "NSK CORP", consignee: "NSK CORP", masterbill: "205-20152015", housebill: "VHF20262026", clearance: true, user_id: 1, eta: "2015-03-27", ata: "2015-03-27", dispatched: false, pod: "")
+Shipment.create(shipper: "NSK PRECISION", consignee: "NSK-PRECISION", masterbill: "607-59809382", housebill: "VHF20182019", clearance: true, user_id: 1, eta: "2015-03-26", ata: "2015-03-26", dispatched: false, pod: "")
+Shipment.create(shipper: "KYOSAN", consignee: "KYOSAN", masterbill: "933-60158454", housebill: "VHF20987854", clearance: true, user_id: 1, eta: "2015-03-27", ata: "2015-03-27", dispatched: false, pod: "")
+Shipment.create(shipper: "DIAMOND", consignee: "DIAMOND", masterbill: "297-20152014", housebill: "VHF20620987", clearance: true, user_id: 1, eta: "2015-03-25", ata: "2015-03-25", dispatched: false, pod: "")
+Shipment.create(shipper: "TOYOTA TSUSHO", consignee: "TOYOTA TSUSHO", masterbill: "933-60158454", housebill: "VHF20192019", clearance: true, user_id: 1, eta: "2015-03-26", ata: "2015-03-26", dispatched: false, pod: "")
+Shipment.create(shipper: "HIAMS-BK", consignee: "HIAMS-BK", masterbill: "933-60158454", housebill: "VHF20182021", clearance: true, user_id: 1, eta: "2015-03-27", ata: "2015-03-27", dispatched: false, pod: "")
+Shipment.create(shipper: "HIAMS-HK", consignee: "HIAMS-HK", masterbill: "297-45454545", housebill: "VHF20182020", clearance: true, user_id: 1, eta: "2015-03-25", ata: "2015-03-25", dispatched: false, pod: "")
+Shipment.create(shipper: "HIAMS-HK", consignee: "HIAMS-HK", masterbill: "297-45454545", housebill: "VHF20182022", clearance: true, user_id: 1, eta: "2015-03-25", ata: "2015-03-25", dispatched: false, pod: "")
+Shipment.create(shipper: "HIAMS-HK", consignee: "HIAMS-HK", masterbill: "297-45454545", housebill: "VHF20182023", clearance: true, user_id: 1, eta: "2015-03-25", ata: "2015-03-25", dispatched: false, pod: "")
 
 
 

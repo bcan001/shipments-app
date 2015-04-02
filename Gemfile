@@ -6,7 +6,10 @@ gem 'pry-nav'
 gem 'bcrypt'
 
 gem 'rspec-rails'
-#gem 'capybara-webkit'
+
+#gem 'capybara', '~> 2.4.4'
+
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
