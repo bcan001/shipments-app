@@ -14,8 +14,6 @@ module ApplicationHelper
 		link_to(title, {:sort => column, :direction => direction}, {:class => css_class, data: { no_turbolink: true }})
 	end
 
-
-
 	def admin?
   	current_user.name == "benny"
 	end
