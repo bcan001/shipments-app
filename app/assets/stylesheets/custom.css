@@ -104,12 +104,17 @@ td:nth-child(even) {
 
 
 
+.centerforms {
+	text-align: center;
+}
 
 
 
 
 
-
+li {
+	list-style-type: none;
+}
 
 
 

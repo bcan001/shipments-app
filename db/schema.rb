@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150328215154) do
+ActiveRecord::Schema.define(version: 20150402003225) do
 
   create_table "shipments", force: :cascade do |t|
     t.string   "shipper"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20150328215154) do
     t.datetime "updated_at",                 null: false
     t.boolean  "archive",    default: false
     t.text     "comments"
+    t.boolean  "billing",    default: false
   end
 
   create_table "users", force: :cascade do |t|

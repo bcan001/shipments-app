@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 
 	def new
 		# form
+		#session[:user_id] = nil
 	end
 
 	def create

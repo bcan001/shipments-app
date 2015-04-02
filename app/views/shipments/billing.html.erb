@@ -12,6 +12,7 @@
 			<th><%= sortable "ETA", "eta" %></th>
 			<th><%= sortable "ATA", "ata" %></th>
 			<th><%= sortable "Dispatched", "dispatched" %></th>
+			<th><%= sortable "Billing", "billing" %></th>
 			<th><%= sortable "POD", "pod" %></th>
 			<th>Comments</th>
 
@@ -33,6 +34,9 @@
 					<td><%= shipment.eta %></td>
 					<td><%= shipment.ata %></td>
 					<td><%= f.check_box :dispatched %></td>
+
+					<td><%= f.check_box :billing %></td>
+
 					
 					<td><%= f.text_field :pod %></td>
 

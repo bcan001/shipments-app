@@ -17,7 +17,7 @@ module ApplicationHelper
 
 
 	def admin?
-  	current_user.name == "benny"
+  	current_user.name == "admin"
 	end
 
 

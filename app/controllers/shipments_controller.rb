@@ -2,7 +2,9 @@ class ShipmentsController < ApplicationController
   # allows you to access methods from the view
   helper_method :sort_column, :sort_direction
 
-  #before_action :current_user
+  include ApplicationHelper
+
+  before_action :current_user
 
 
 
@@ -63,6 +65,12 @@ class ShipmentsController < ApplicationController
 
   def archive
     @shipments = Shipment.where(archive: true)
+
+    respond_to do |format|
+    format.html
+    format.csv { send_data @shipments.to_csv}
+    format.xls{ send_data @shipments.to_csv(col_sep: "\t")}
+  end
   end
 
 
